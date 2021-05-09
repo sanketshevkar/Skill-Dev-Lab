@@ -23,7 +23,7 @@ router.post('/', async (req, res) => {
             downVotes: 0
         });
         const tweet = await newTweet.save();
-        res.json(tweet);
+        res.json({msg: "Tweet Added Sccessfully!"});
     }catch (err){
         console.error(err.message);
         res.status(500).send('Server Error');
@@ -54,7 +54,7 @@ router.delete('/', async (req, res) => {
         }
         await tweet.remove();
         const tweets = await Tweet.find().sort({ date: -1 });
-        res.json({ msg: 'Tweet removed' });
+        res.json({ msg: 'Tweet removed Successfully!' });
     }catch (err) {
         console.error(err.message);
         res.status(500).send('Server Error');
