@@ -1,0 +1,5 @@
+{
+    "mongoURI": "mongodb+srv://santin:ok12345@cluster0.tamwg.mongodb.net/Users?retryWrites=true&w=majority",
+    "jwtSecret": "secret",
+    "PORT": 5000
+}
